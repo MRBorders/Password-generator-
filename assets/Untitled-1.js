@@ -25,6 +25,8 @@ var specialCharQuestion= window.confirm ("Do you want special characters in your
   }
   
 var numericalValuesQuestion= window.confirm ("Do you want numbers in your genereated password?")
+if (numericalValuesQuestion===true)
+
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
@@ -32,6 +34,7 @@ function writePassword() {
 
   passwordText.value = password;
 
+}
 }
 
 // Add event listener to generate button
