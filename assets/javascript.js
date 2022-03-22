@@ -31,12 +31,53 @@ function generatorQuestions() {
   }
   return data;
  }
+ console.log (generatorQuestions)
 
- function generatePassword(){
-   console.log (generatorQuestions)
- }
+function generatePassword(){
+
+  var inputs= generatorQuestions();
+  var outputs= [];
   
-console.log (generatePassword)
+
+  if(inputs.uppercaseQuestion){
+    for(i=0; i< uppercase.passwordLength; i++){
+      outputs.push(uppercase[i]);
+    }
+  }
+  if(inputs.lowercaseQuestion){
+    for (i = 0; i < lowercase.passwordLength; i++){
+      outputs.push(lowercase[i]);
+    }
+  }
+      if(inputs.numericalValuesQuestion){
+        for( i=0; i <numericalValues.passwordLength; i++) {
+          outputs.push(numericalValues[i]);
+        }
+      }
+
+      if (inputs.specialCharQuestion){
+        for (i=0; i < specialChar.passwordLength;i++){
+        outputs.push(specialChar[i]);
+      }
+    }
+    var finalPassword= [];
+    for(i=0 ; i< outputs.passwordLength; i++){
+      var equation = Math.floor(math.random() * math.floor(outputs.passwordLength));
+      finalPassword.push(output[equation])
+    }
+
+   console.log (finalPassword);
+
+    
+  }
+
+
+    
+    
+      
+
+        
+
 
 
 // Write password to the #password input
