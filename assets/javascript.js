@@ -2,33 +2,34 @@
 var generateBtn = document.querySelector("#generate");
 
 //created arrays for possible password combos
-var uppercase = [
-  "A",
-  "B",
-  "C",
-  "D",
-  "E",
-  "F",
-  "G",
-  "H",
-  "I",
-  "J",
-  "K",
-  "L",
-  "M",
-  "N",
-  "O",
-  "P",
-  "Q",
-  "R",
-  "S",
-  "T",
-  "U",
-  "V",
-  "W",
-  "X",
-  "Y",
-  "Z",
+var uppercase = [ 
+   "A",
+"B",
+"C",
+"D",
+"E",
+"F",
+"G",
+"H",
+"I",
+"J",
+"K",
+"L",
+"M",
+"N",
+"O",
+"P",
+"Q",
+"R",
+"S",
+"T",
+"U",
+"V",
+"W",
+"X",
+"Y",
+"Z",
+
 ];
 var lowercase = [
   "a",
@@ -75,10 +76,6 @@ function generatePassword() {
   var inputs = generateQuestion();
 
   if (inputs.uppercaseQuestion) {
-    // for (i = 0; i < uppercase.length; i++) {
-    //   outputs.push(uppercase[i]);
-    //   console.log(outputs[i]);
-    // }
    outputs= outputs.concat(uppercase)
   }
   if (inputs.lowercaseQuestion) {
@@ -115,6 +112,8 @@ function writePassword() {
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
+
+//moved down to reduce visual clutter
 
 function generateQuestion() {
   var uppercaseQuestion = confirm(
